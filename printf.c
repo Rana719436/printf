@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
+/**
+ * _printf - function that produces output according to a format.
+ *@format: Fixed 
+ * Return: i
+ */
 
 int _printf(const char *format, ...)
 {
