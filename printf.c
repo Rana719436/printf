@@ -26,12 +26,16 @@ int _printf(const char *format, ...)
 			    case 's':
 				    printf("%s", va_arg(args, char*));
 				    break;
-			    case '%':
-                                    printf("%%");
-                                    break;
 			    default:
 				    printf("Invalid format specifier");
 				    break;
+		    }
+		    i++;
+                    switch (format[i])
+		    {
+			    case '%':
+                                    printf("%%");
+                                    break;
 		    }
 	    }
 	    else
