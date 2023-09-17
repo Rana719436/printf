@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * _printf - function that produces output according to a format.
- *@format: Fixed 
+ *@format: Fixed
  * Return: i
  */
 
@@ -15,26 +15,26 @@ int _printf(const char *format, ...)
     va_start(args, format);
     for (i = 0; format[i] != '\0'; i++)
     {
-        if (format[i] == '%')
-        {
-            i++;
-            switch (format[i])
-            {
-                case 'c':
-                    printf("%c", va_arg(args, int));
-                    break;
-                case 's':
-                    printf("%s", va_arg(args, char*));
-                    break;
-                default:
-                    printf("Invalid format specifier");
-                    break;
-            }
-        }
-        else
-        {
-            putchar(format[i]);
-        }
+	    if (format[i] == '%')
+	    {
+		    i++;
+		    switch (format[i])
+		    {
+			    case 'c':
+				    printf("%c", va_arg(args, int));
+				    break;
+			    case 's':
+				    printf("%s", va_arg(args, char*));
+				    break;
+			    default:
+				    printf("Invalid format specifier");
+				    break;
+		    }
+	    }
+	    else
+	    {
+		    putchar(format[i]);
+	    }
     }
     va_end(args);
     return (i);
