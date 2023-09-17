@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * _printf - function that produces output according to a format.
- *@format: Fixed argument
+ * @format: Fixed argument
  * Return: i
  */
 
