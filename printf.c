@@ -19,22 +19,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			switch (format[i])
-			{
-				case 'c':
-					printf("%c", va_arg(args, int));
-					break;
-				case 's':
-					printf("%s", va_arg(args, char*));
-					break;
-				case '%':
-					printf("%%");
-					break;
-				default:
-					printf("Invalid format specifier");
-					break;
-				fflush(stdout);
-			}
+			cases(i,format);
+			fflush(stdout);
 		}
 		else
 		{
