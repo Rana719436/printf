@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			cases(i,format);
+			cases(i, format);
 			fflush(stdout);
 		}
 		else
