@@ -10,7 +10,9 @@
 void cases(int i, const char *format, ...)
 {
 	va_list args;
+
 	va_start(args, format);
+
 	switch (format[i])
 	{
 	case 'i':
