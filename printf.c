@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * _printf - function that produces output according to a format.
  * @format: Fixed argument
@@ -32,11 +33,13 @@ int _printf(const char *format, ...)
 				default:
 					printf("Invalid format specifier");
 					break;
+				fflush(stdout);
 			}
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
+			fflush(stdout);
 		}
 	}
 	va_end(args);
