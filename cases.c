@@ -17,7 +17,12 @@ void cases(int i, const char *format, ...)
 	switch (format[i])
 	{
 	case 'd':
-		printf("%d", va_arg(args, int));
+		i = va_arg(args, int);
+		if (i < 0)
+		{
+			i = -i;
+			putchar('-');
+		}
 		break;
 	case 'i':
 		printf("%i", va_arg(args, int));
@@ -29,9 +34,7 @@ void cases(int i, const char *format, ...)
 		printf("%c", va_arg(args, int));
 		break;
 	case 's':
-		/*printf("%s", va_arg(args, const char *));*/
-		for (i; i < 'NULL'; i)
-			_putchar(i);
+		printf("%s", va_arg(args, const char *));
 		break;
 	case '%':
 		printf("%%");
