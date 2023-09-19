@@ -22,6 +22,7 @@ void cases(int i, const char *format, ...)
 		{
 			i = -i;
 			putchar('-');
+			printf("%d", i);
 		}
 		break;
 	case 'i':
