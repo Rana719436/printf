@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
 #include "main.h"
 /**
  * cases - its cases
@@ -8,22 +9,12 @@
  * @format: its format
  */
 
-void cases(int i, const char *format, ...)
+void cases(int i, const char *format, va_list args)
 {
-	va_list args;
-
-	va_start(args, format);
-
 	switch (format[i])
 	{
 	case 'd':
-		i = va_arg(args, int);
-		if (i < 0)
-		{
-			i = -i;
-			putchar('-');
-			printf("%d", i);
-		}
+		printf("%d", va_arg(args, int));
 		break;
 	case 'i':
 		printf("%i", va_arg(args, int));

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -19,15 +20,13 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			cases(i, format);
-			fflush(stdout);
+			cases(i, format, args);
 		}
 		else
 		{
-			_putchar(format[i]);
-			fflush(stdout);
+			putchar(format[i]);
 		}
 	}
 	va_end(args);
-	return (i);
+	return i;
 }
