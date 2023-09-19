@@ -18,25 +18,25 @@ void cases(int i, const char *format, ...)
 	switch (format[i])
 	{
 	case 'd':
-		printf("%d", va_arg(args, int));
+		_printf("%d", va_arg(args, int));
 		break;
 	case 'i':
-		printf("%i", va_arg(args, int));
+		_printf("%i", va_arg(args, int));
 		break;
 	case 'f':
-		printf("%f", va_arg(args, double));
+		_printf("%f", va_arg(args, double));
 		break;
 	case 'c':
-		printf("%c", va_arg(args, int));
+		_printf("%c", va_arg(args, int));
 		break;
 	case 's':
-		printf("%s", va_arg(args, const char *));
+		_printf("%s", va_arg(args, const char *));
 		break;
 	case '%':
-		printf("%%");
+		_printf("%%");
 		break;
 	default:
-		printf("Invalid format specifier");
+		_printf("Invalid format specifier");
 		break;
 	}
 	va_end(args);
