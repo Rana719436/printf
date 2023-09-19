@@ -21,12 +21,14 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			cases(i, format, args);
+			fflush(stdout);
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
+			fflush(stdout);
 		}
 	}
 	va_end(args);
-	return i;
+	return (i);
 }
