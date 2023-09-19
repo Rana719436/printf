@@ -9,8 +9,12 @@
  * @format: its format
  */
 
-void cases(int i, const char *format, va_list args)
+void cases(int i, const char *format, ...)
 {
+	va_list args;
+
+	va_start(args, format);
+
 	switch (format[i])
 	{
 	case 'd':
