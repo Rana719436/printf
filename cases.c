@@ -30,7 +30,8 @@ void cases(int i, const char *format, ...)
 		break;
 	case 's':
 		/*printf("%s", va_arg(args, const char *));*/
-		_putchar(va_arg(args, int));
+		for (i; i < 'NULL'; i)
+			_putchar(i);
 		break;
 	case '%':
 		printf("%%");
