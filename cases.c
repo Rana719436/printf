@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include "main.h"
 /**
  * cases - its cases
  * @i: its i
@@ -15,6 +16,9 @@ void cases(int i, const char *format, ...)
 
 	switch (format[i])
 	{
+	case 'd':
+		printf("%d", va_arg(args, int));
+		break;
 	case 'i':
 		printf("%i", va_arg(args, int));
 		break;
@@ -25,7 +29,8 @@ void cases(int i, const char *format, ...)
 		printf("%c", va_arg(args, int));
 		break;
 	case 's':
-		printf("%s", va_arg(args, char *));
+		/*printf("%s", va_arg(args, const char *));*/
+		_putchar(va_arg(args, int));
 		break;
 	case '%':
 		printf("%%");
